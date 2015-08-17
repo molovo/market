@@ -59,7 +59,7 @@ body {
   color: #264653; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Galaxie Polaris", "franklin-gothic-urw", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 700; }
 
 h1 {
@@ -133,7 +133,7 @@ blockquote, figcaption {
   display: block; }
   blockquote cite, figcaption cite {
     display: block;
-    font-family: "Galaxie Polaris", "franklin-gothic-urw", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-weight: 600;
     font-style: normal; }
   blockquote p:last-of-type, figcaption p:last-of-type {
@@ -148,7 +148,7 @@ blockquote.pull {
   margin: 0 0 .66667em;
   line-height: 1.35em;
   font-weight: 200;
-  font-family: "Galaxie Polaris", "franklin-gothic-urw", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
   blockquote.pull cite {
     font-size: .44444em; }
 
@@ -265,7 +265,34 @@ a {
     width: 81.02467%; } }
 
 .admin--main {
-  padding: 3em 1.5em; }
+  padding: 3em 1.5em;
+  overflow-y: auto;
+  height: 100vh; }
+
+.admin--header {
+  font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  .admin--header ul {
+    list-style: none;
+    text-align: right; }
+  .admin--header li {
+    display: inline-block; }
+    .admin--header li a {
+      padding: .25rem .75rem;
+      text-decoration: none; }
+  .admin--header-separator {
+    padding: .25rem 0;
+    margin: 0 .75rem;
+    border-right: 1px solid rgba(38, 70, 83, 0.1);
+    width: 1px; }
+    .admin--header-separator:after {
+      content: '\00A0'; }
+  .admin--header-settings img {
+    height: 1.5rem;
+    border-radius: .15rem;
+    margin-right: .25rem;
+    vertical-align: top; }
+  .admin--header-settings a {
+    font-weight: 700; }
 
 .admin--sidebar {
   background: #264653;
@@ -274,15 +301,63 @@ a {
   padding: 3rem .75rem;
   color: white;
   height: 100vh;
-  overflow-y: auto;
   display: inline-block; }
+  .admin--sidebar .admin--sidebar-module-selector {
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 10; }
+    .admin--sidebar .admin--sidebar-module-selector-item {
+      display: none; }
+      .admin--sidebar .admin--sidebar-module-selector-item a {
+        width: 100%;
+        padding: .25rem .75rem;
+        font-weight: 700; }
+      .admin--sidebar .admin--sidebar-module-selector-item.selected {
+        display: block; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="1"]:hover {
+      margin-bottom: -0.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="2"]:hover {
+      margin-bottom: -2.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="3"]:hover {
+      margin-bottom: -4.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="4"]:hover {
+      margin-bottom: -6.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="5"]:hover {
+      margin-bottom: -8.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="6"]:hover {
+      margin-bottom: -10.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="7"]:hover {
+      margin-bottom: -12.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="8"]:hover {
+      margin-bottom: -14.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="9"]:hover {
+      margin-bottom: -16.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector[module-count="10"]:hover {
+      margin-bottom: -18.125rem; }
+    .admin--sidebar .admin--sidebar-module-selector:hover .admin--sidebar-module-selector-item {
+      display: block;
+      background: white;
+      border-radius: 0; }
+      .admin--sidebar .admin--sidebar-module-selector:hover .admin--sidebar-module-selector-item:hover {
+        background: #26547C; }
+        .admin--sidebar .admin--sidebar-module-selector:hover .admin--sidebar-module-selector-item:hover a {
+          background: transparent;
+          color: white; }
+      .admin--sidebar .admin--sidebar-module-selector:hover .admin--sidebar-module-selector-item:not(:last-child) {
+        border-bottom: 1px solid rgba(38, 70, 83, 0.1); }
+      .admin--sidebar .admin--sidebar-module-selector:hover .admin--sidebar-module-selector-item:first-child {
+        border-radius: .15rem .15rem 0 0; }
+      .admin--sidebar .admin--sidebar-module-selector:hover .admin--sidebar-module-selector-item:last-child {
+        border-radius: 0 0 .15rem .15rem; }
+      .admin--sidebar .admin--sidebar-module-selector:hover .admin--sidebar-module-selector-item a {
+        color: #264653; }
   .admin--sidebar-logo {
     display: block;
     margin-bottom: 3rem; }
   .admin--sidebar-menu, .admin--sidebar-menu li, .admin--sidebar-menu ul, .admin--sidebar-menu ol {
     list-style: none;
     padding: 0;
-    margin: 0; }
+    margin-left: 0; }
   .admin--sidebar-menu > li {
     margin-bottom: 1.5rem; }
   .admin--sidebar-menu-sub {
@@ -290,7 +365,7 @@ a {
   .admin--sidebar h6 {
     margin-bottom: 0;
     font-size: .675rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: .025rem;
     text-transform: uppercase;
     padding: .25rem .75rem; }
@@ -298,10 +373,10 @@ a {
     color: white;
     text-decoration: none;
     display: block;
-    padding: .25rem .75rem .15rem;
+    padding: .25rem .75rem;
     border-radius: .15rem;
-    font-family: "Galaxie Polaris", "franklin-gothic-urw", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-weight: 500; }
+    font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 400; }
     .admin--sidebar a:hover {
       background: rgba(255, 255, 255, 0.15); }
 
@@ -312,15 +387,20 @@ a {
     border: 1px solid rgba(38, 70, 83, 0.1);
     padding: .75rem 1rem .5rem;
     color: #264653;
-    font-family: "Galaxie Polaris", "franklin-gothic-urw", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 1em;
     font-weight: 400; }
   .admin-form label {
     display: block;
-    font-family: "Galaxie Polaris", "franklin-gothic-urw", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-weight: 500; }
+    font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 400; }
   .admin-form fieldset {
     margin-bottom: 1.5em; }
+  .admin-form legend {
+    font-family: -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: .75rem;
+    text-transform: uppercase; }
   .admin-form--title input, .admin-form--title textarea, .admin-form--title select {
     font-size: 2.25em;
     font-family: "Tiempos Headline", "Tiempos Text", "Georgia", "Times New Roman", serif;

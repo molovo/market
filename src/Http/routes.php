@@ -1,6 +1,6 @@
 <?php
 
-Route::group( [ 'prefix' => 'market' ], function() {
+Route::group( [ 'prefix' => '_market' ], function() {
   Route::get( '/', function() {
     return view( 'market::layouts.dashboard' );
   } );
