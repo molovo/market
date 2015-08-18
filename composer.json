@@ -43,10 +43,8 @@
       "dev-master": "1.0-dev"
     }
   },
-  "repositories":[
-      {
-          "type": "git",
-          "url": "https://github.com/molovo/admin.git"
-      }
-  ]
+  "repositories": [ {
+    "type": "git",
+    "url": "https://github.com/molovo/admin.git"
+  } ]
 }
