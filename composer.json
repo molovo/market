@@ -46,5 +46,6 @@
   "repositories": [ {
     "type": "git",
     "url": "https://github.com/molovo/admin.git"
-  } ]
+  } ],
+  "minimum-stability": "dev"
 }
