@@ -16,7 +16,7 @@
   "require": {
     "illuminate/support": "~5.1",
     "php": ">=5.5.9",
-    "molovo/admin": "dev-master"
+    "molovo/admin": "1.0-dev"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
