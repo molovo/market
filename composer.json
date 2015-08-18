@@ -1,6 +1,6 @@
 {
   "name": "molovo/market",
-  "description": "A fully fledged e-commerce admin module for Laravel 5.1+",
+  "description": "An e-commerce module for molovo/admin",
   "keywords": [
     "molovo",
     "market"
