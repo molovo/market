@@ -15,7 +15,8 @@
   } ],
   "require": {
     "illuminate/support": "~5.1",
-    "php": ">=5.3.0"
+    "php": ">=5.5.9",
+    "molovo/admin": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
@@ -41,5 +42,11 @@
     "branch-alias": {
       "dev-master": "1.0-dev"
     }
-  }
+  },
+  "repositories":[
+      {
+          "type": "git",
+          "url": "https://github.com/molovo/admin.git"
+      }
+  ]
 }
